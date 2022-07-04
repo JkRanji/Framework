@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
  public class BaseTest implements IAutoConstants{
 	public WebDriver driver;
 	static  
-	{//static block
+	{//static block for web driver
 		System.setProperty(CHROME_KEY, CHROME_VALUE);
 		System.setProperty(GECKO_KEY, GECKO_VALUE);
 	}
