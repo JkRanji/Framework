@@ -13,7 +13,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class AutoUtils 
-{//Method to take screenshot.
+{
+	//Method to take screenshot.
 	public static String getphoto(WebDriver driver,String folder,String filename) 
 	{
 		String datetime=new Date().toString().replace(":", "_");
