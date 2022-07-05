@@ -1,7 +1,7 @@
 package generic;
 
 import java.time.Duration;
-
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -21,8 +21,8 @@ import org.testng.annotations.BeforeMethod;
 	{
 		String appURL=AutoUtils.getproperty(CONFIG_PATH, "URL");
 		String strITO=AutoUtils.getproperty(CONFIG_PATH, "ITO");
-		//long ITO=Long.parseLong(strITO);
-		int ITO=Integer.parseInt(strITO);
+	long ITO=Long.parseLong(strITO);
+		//int ITO=Integer.parseInt(strITO);
 		driver= new ChromeDriver();
 		driver.get(appURL);
 		driver.manage().window().maximize();
