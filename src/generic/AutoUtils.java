@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AutoUtils 
 {
+	
 	//Method to take screenshot.
 	public static String getphoto(WebDriver driver,String folder,String filename) 
 	{
@@ -46,13 +47,21 @@ public class AutoUtils
 		return v;
 	}*/
 	
-	public static String getproperty(String path, String key) throws FileNotFoundException, IOException
-	{
-		
+	public static String getproperty(String path, String key) 
+	{ String v="";
+		try
+		{
 		Properties p=new Properties();
 		p.load(new FileInputStream(path));
-		String v=p.getProperty(key);
+		 v=p.getProperty(key);
+		}
+		catch(Exception e)
+		{
+			
+		}
+		
+		
 		return v;
-	}
+		}
 	
 }

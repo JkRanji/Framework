@@ -1,7 +1,5 @@
 package generic;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -19,7 +17,7 @@ import org.testng.annotations.BeforeMethod;
 		System.setProperty(GECKO_KEY, GECKO_VALUE);
 	}
 	@BeforeMethod(alwaysRun=true)
-	public void openapp() throws FileNotFoundException, IOException 
+	public void openapp()
 	{
 		String appURL=AutoUtils.getproperty(CONFIG_PATH, "URL");
 		String strITO=AutoUtils.getproperty(CONFIG_PATH, "ITO");
