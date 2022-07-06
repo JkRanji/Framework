@@ -18,12 +18,13 @@ public class AutoUtils
 	//Method to take screenshot.
 	public static String getphoto(WebDriver driver,String folder,String filename) //Constructor method
 	{
+		try {
 		String datetime=new Date().toString().replace(":", "_");
 	    String path=folder+filename+datetime+".png";
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File sourcefile=ts.getScreenshotAs(OutputType.FILE);
 		File destinationfile=new File(path);
-		try {
+		
 			FileUtils.copyFile(sourcefile, destinationfile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
