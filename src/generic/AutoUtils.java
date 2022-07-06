@@ -16,7 +16,7 @@ public class AutoUtils
 {
 	
 	//Method to take screenshot.
-	public static String getphoto(WebDriver driver,String folder,String filename) 
+	public static String getphoto(WebDriver driver,String folder,String filename) //Constructor method
 	{
 		String datetime=new Date().toString().replace(":", "_");
 	    String path=folder+filename+datetime+".png";
