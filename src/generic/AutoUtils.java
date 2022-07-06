@@ -2,8 +2,6 @@ package generic;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
@@ -26,7 +24,7 @@ public class AutoUtils
 		File destinationfile=new File(path);
 		
 			FileUtils.copyFile(sourcefile, destinationfile);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			
 		}
